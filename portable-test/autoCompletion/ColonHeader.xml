@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotepadPlus>
+    <AutoComplete>
+        <KeyWord name="myFunctionName" func="yes">
+            <Overload retVal="void" descr="Description of what the function does">
+                <Param name="int firstParameter" />
+                <Param name="string secondParameter" />
+            </Overload>
+        </KeyWord>
+		<KeyWord name="bilateral" />
+		<KeyWord name="findings" />
+        <KeyWord name="liver" />
+        <KeyWord name="gallbladder" />
+        <KeyWord name="pancreas" />
+        <KeyWord name="spleen" />
+        <KeyWord name="adrenal glands" />
+        <KeyWord name="kidneys and ureters" />
+        <KeyWord name="urinary bladder" />
+        <KeyWord name="pelvis" />
+        <KeyWord name="uterus" />
+        <KeyWord name="adnexal pathology" />
+        <KeyWord name="prostate gland" />
+        <KeyWord name="gastrointestinal tract" />
+        <KeyWord name="mesentery and retroperitoneum" />
+        <KeyWord name="vessels" />
+        <KeyWord name="abdominal wall" />
+        <KeyWord name="bones" />
+        <KeyWord name="visualized lower chest" />
+    </AutoComplete>
+</NotepadPlus>

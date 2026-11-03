@@ -1,0 +1,13 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<NotepadPlus>
+    <functionList>
+        <parser id="report_sections" displayName="Report Sections">
+            <function mainExpr="(?-s)^[ \t]*[A-Z][A-Z0-9 /()_-]*:">
+                <functionName>
+                    <nameExpr expr="(?-s)[A-Z][A-Z0-9 /()_-]*:"/>
+                </functionName>
+            </function>
+        </parser>
+    </functionList>
+</NotepadPlus>

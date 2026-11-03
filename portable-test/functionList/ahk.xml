@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ==========================================================================\
+|
+|   To learn how to make your own language parser, please check the following
+|   link:
+|       https://npp-user-manual.org/docs/function-list/
+|
+\=========================================================================== -->
+<NotepadPlus>
+	<functionList>
+		<!-- ======================================================== [ AHK ] -->
+		<!-- AHK - AutoHotKey Language                -->
+
+		<parser id="ahk_function" displayName="AHK" commentExpr="((/\*.*?\*)/|((?<=[\s]);.*?$))">
+				<classRange
+					mainExpr="^[ \t]*(class|struct)[ \t]+[\w]+([ \t]+|[ \t]+(extends)[ \t]+)?[\w.]*([\s]|(/\*.*?\*)/|((?<=[\s]);[^\r\n]*?$))*?[\s]*\{"
+					openSymbole = "\{"
+					closeSymbole = "\}">
+					<className>
+						<nameExpr expr="(class|struct)[\s]+[\w]+"/>
+						<nameExpr expr="[\s]+[\w]+"/>
+						<nameExpr expr="[\w]+"/>
+					</className>
+					<function
+						mainExpr="^[ \t]*(?!(if\(|while\(|for\())([\w#!^+&<>*~$])+\d*(\([^)]*\)|\[[^]]*\])([\s]|(/\*.*?\*)/|((?<=[\s]);[^\r\n]*?$))*?[\s]*\{|^[ \t]*(?!(if\(|while\(|for\())([\w#!^+&<>*~$])+\d*:(?=([\s]*[\r\n]|[\s]+;.*[\r\n]))|^[ \t]*(?!(;|if\(|while\(|for\())([^\r\n\t])+\d*(?&lt;![\s])::">
+						<functionName>
+							<funcNameExpr expr="([\w#!^+&<>*~$])+\d*(\([^)]*\)|\[[^]]*\])|([\w#!^+&<>*~$])+\d*:(?!:)|(?![ ])([^\r\n\t])+\d*::"/>
+						</functionName>
+					</function>
+				</classRange>
+				<function
+					mainExpr="^[ \t]*(?!(if\(|while\(|for\())([\w#!^+&<>*~$])+\d*\([^)]*\)([\s]|(/\*.*?\*)/|((?<=[\s]);[^\r\n]*?$))*?[\s]*\{|^[ \t]*(?!(if\(|while\(|for\())([\w#!^+&<>*~$])+\d*:(?=([\s]*[\r\n]|[\s]+;.*[\r\n]))|^[ \t]*(?!(;|if\(|while\(|for\())([^\r\n\t])+\d*(?&lt;![\s])::">
+					<functionName>
+						<nameExpr expr="([\w#!^+&<>*~$])+\d*\([^)]*\)|([\w#!^+&<>*~$])+\d*:(?!:)|(?![ ])([^\r\n\t])+\d*::"/>
+					</functionName>
+				</function>
+		</parser>
+	</functionList>
+</NotepadPlus>
